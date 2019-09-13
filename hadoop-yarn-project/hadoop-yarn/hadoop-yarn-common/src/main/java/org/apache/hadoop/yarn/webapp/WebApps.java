@@ -243,8 +243,7 @@ public class WebApps {
       }
       webapp.setName(name);
       webapp.setWebServices(wsName);
-      String basePath = "/" + name;
-      webapp.setRedirectPath(basePath);
+      webapp.setRedirectPath(name);
       List<String> pathList = new ArrayList<String>();
       if (basePath.equals("/")) { 
         webapp.addServePathSpec("/*");
@@ -501,7 +500,7 @@ public class WebApps {
     }
   }
 
-  /**
+   /**
    * Create a new webapp builder.
    * @see WebApps for a complete example
    * @param <T> application (holding the embedded webapp) type
